@@ -1,0 +1,68 @@
+Steps to run Flask APPs
+
+Got to the directory of your project and create your virtual environment for the project
+py -m venv <your environment name>  
+
+e.g py -m venv env
+
+Here env is your virtual environment name. After you will hit enter it will create a folder with the same name as  
+of your environment name (here env). After pressing enter, it will take some time so be patient.
+
+
+
+Now activate your environment by typing:
+env\Scripts\activate
+
+
+It will start an env environment inside your project folder.
+
+for e.g
+(env)E:\Yourproject_Folder>
+
+Now set your project file as FlASK_APP in the environment:
+
+(env)E:\Yourproject_Folder>set FLASK_APP=HelloWorld.py
+
+Here HelloWorld.py is our code file for the project.Don't name your project flask.py or Flask.py.
+
+
+Now in the project folder in your virtual environment, run flask.
+
+(env)E:\Yourproject_Folder>flask run
+
+Flask will tell you the location where it is running it like:
+http://127.0.0.1:5000/
+
+Write it on your browser and it will take you there. To stop press CTRL+C on your terminal. 
+You can then modify your file to add more code and try more stuff.
+
+For our first lab we will first make a simple hello world example:
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def HelloWorld():
+    return "<h1>Hello World</h1>  <br>"
+
+Then we will run it and stop it in the virtual environment and on our browser as discussed above. After the we will insha Allah change it to:
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def HelloWorld():
+    return "<h1>Hello World</h1>  <br> ISPA Flask Lab."
+
+Then we will run it again to see if it works. Then again we will press CTRL+C to stop it.
+
+Now type deactivate to come out of your environment.
+
+Make another project, set environment for it and try at your own end.
+
+(env)E:\Yourproject_Folder>deactivate
+
+
+
+
+
